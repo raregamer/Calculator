@@ -14,6 +14,8 @@
 		2424885423DA9EB700076AD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2424885223DA9EB700076AD4 /* LaunchScreen.storyboard */; };
 		2424885F23DA9EB700076AD4 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424885E23DA9EB700076AD4 /* CalculatorTests.swift */; };
 		2424886A23DA9EB700076AD4 /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424886923DA9EB700076AD4 /* CalculatorUITests.swift */; };
+		42A091DD23DB5D9B000F2694 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A091DC23DB5D9B000F2694 /* SettingsViewController.swift */; };
+		42A091DF23DB7940000F2694 /* DefaultTipSetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A091DE23DB7940000F2694 /* DefaultTipSetterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		2424886523DA9EB700076AD4 /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2424886923DA9EB700076AD4 /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		2424886B23DA9EB700076AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42A091DC23DB5D9B000F2694 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		42A091DE23DB7940000F2694 /* DefaultTipSetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTipSetterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +104,11 @@
 				2424884923DA9EB600076AD4 /* AppDelegate.swift */,
 				2424884B23DA9EB600076AD4 /* ViewController.swift */,
 				2424884D23DA9EB600076AD4 /* Main.storyboard */,
+				42A091DC23DB5D9B000F2694 /* SettingsViewController.swift */,
 				2424885023DA9EB700076AD4 /* Assets.xcassets */,
 				2424885223DA9EB700076AD4 /* LaunchScreen.storyboard */,
 				2424885523DA9EB700076AD4 /* Info.plist */,
+				42A091DE23DB7940000F2694 /* DefaultTipSetterViewController.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -257,7 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2424884C23DA9EB600076AD4 /* ViewController.swift in Sources */,
+				42A091DD23DB5D9B000F2694 /* SettingsViewController.swift in Sources */,
 				2424884A23DA9EB600076AD4 /* AppDelegate.swift in Sources */,
+				42A091DF23DB7940000F2694 /* DefaultTipSetterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
