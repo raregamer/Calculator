@@ -1,6 +1,6 @@
-# Pre-work - *Name of App Here*
+# Pre-work - *CalcU Tip*
 
-**Name of your app** is a tip calculator application for iOS.
+**CalcU Tip** is a tip calculator application for iOS.
 
 Submitted by: **Samuel Elbaz**
 
