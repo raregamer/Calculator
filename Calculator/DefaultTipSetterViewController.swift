@@ -15,6 +15,8 @@ class DefaultTipSetterViewController: UIViewController {
     @IBOutlet weak var defaultTipTwoField: UITextField!
     @IBOutlet weak var defaultTipThreeField: UITextField!
     @IBOutlet weak var defaultTipDoneButton: UIButton!
+    @IBOutlet weak var ErrorLabel: UILabel!
+
     let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
@@ -38,7 +40,7 @@ class DefaultTipSetterViewController: UIViewController {
     @IBAction func updateTipValues(_ sender: Any) {
         //On submit assign percentages values to default values
         if(defaultTipOneField.text?.isEmpty ?? true || defaultTipTwoField.text?.isEmpty ?? true || defaultTipThreeField.text?.isEmpty ?? true){
-            print("All fields required")
+            ErrorLabel.isHidden = false
         }else{
             let tipPercentages = [
                 Double(defaultTipOneField.text!),
@@ -48,6 +50,7 @@ class DefaultTipSetterViewController: UIViewController {
 
             defaults.set(tipPercentages,forKey: "tipPercentages")
             _ = navigationController?.popViewController(animated: true)
+            ErrorLabel.isHidden = true
 
         }
     }

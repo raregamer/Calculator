@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        super.viewWillAppear(animated)
             self.tipPercentages = defaults.object(forKey:"tipPercentages") as?[Double] ?? [15,18,20]
 
         for(index, value) in tipPercentages.enumerated(){
@@ -34,6 +34,13 @@ class ViewController: UIViewController {
             tipControl.setTitle(String(format: "%.0f%%" , value), forSegmentAt: index)
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("in here")
+        billField.becomeFirstResponder()
+    }
+    
 
     @IBAction func onTap(_ sender: Any) {
         view.endEditing(true)

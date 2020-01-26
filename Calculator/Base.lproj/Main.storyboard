@@ -210,12 +210,21 @@
                                     <action selector="updateTipValues:" destination="Vwi-fl-HPg" eventType="touchUpInside" id="c0J-qb-eYN"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="All fields required" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cza-P5-6bg">
+                                <rect key="frame" x="17" y="228" width="342" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.79930747911438993" blue="0.65115149238285708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="pBW-Ya-l7J"/>
                     </view>
                     <navigationItem key="navigationItem" id="4uu-ac-2vg"/>
                     <connections>
+                        <outlet property="ErrorLabel" destination="Cza-P5-6bg" id="b3t-yM-jRE"/>
                         <outlet property="defaultTipDoneButton" destination="QQu-uK-vSL" id="SxL-VP-Rwm"/>
                         <outlet property="defaultTipOneField" destination="xS3-9k-wTZ" id="f56-or-OnM"/>
                         <outlet property="defaultTipThreeField" destination="Oeg-DG-QSu" id="quj-TE-SZ7"/>
