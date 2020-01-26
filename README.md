@@ -35,7 +35,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 Describe any challenges encountered while building the app.
 
-    1. UserDefaults are set in a variable in a way I need to optimize better in the future. I believe it could have been manipulated it better. 
+1. UserDefaults are set in a variable in a way I need to optimize better in the future. I believe it could have been manipulated it better. 
 
 ## License
 
