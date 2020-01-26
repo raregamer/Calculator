@@ -14,15 +14,35 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipControl: UISegmentedControl!
+    let defaults = UserDefaults.standard
+    var tipPercentages = [Double]()
     
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+            self.tipPercentages = defaults.object(forKey:"tipPercentages") as?[Double] ?? [15,18,20]
+
+        for(index, value) in tipPercentages.enumerated(){
+//            set title string of percent values
+            tipControl.setTitle(String(format: "%.0f%%" , value), forSegmentAt: index)
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("in here")
+        billField.becomeFirstResponder()
+    }
+    
 
     @IBAction func onTap(_ sender: Any) {
-        print("Hello")
-        
         view.endEditing(true)
         
     }
@@ -31,8 +51,7 @@ class ViewController: UIViewController {
         //Get bill amount
         let bill = Double(billField.text!) ?? 0
         //calculate the tip and total
-        let tipPrecentages = [0.15,0.18,0.2]
-        let tip = bill * tipPrecentages[tipControl.selectedSegmentIndex]
+        let tip = bill * (tipPercentages[tipControl.selectedSegmentIndex]/100)
         let total = bill + tip
         
         
