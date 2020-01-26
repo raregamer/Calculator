@@ -27,11 +27,11 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-            self.tipPercentages = defaults.object(forKey:"tipPercentages") as?[Double] ?? [0.15,0.18,0.2]
+            self.tipPercentages = defaults.object(forKey:"tipPercentages") as?[Double] ?? [15,18,20]
 
         for(index, value) in tipPercentages.enumerated(){
-            print(value, index)
-            tipControl.setTitle(String(format: "%.2f" , value), forSegmentAt: index)
+//            set title string of percent values
+            tipControl.setTitle(String(format: "%.0f%%" , value), forSegmentAt: index)
         }
     }
 
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         //Get bill amount
         let bill = Double(billField.text!) ?? 0
         //calculate the tip and total
-        let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
+        let tip = bill * (tipPercentages[tipControl.selectedSegmentIndex]/100)
         let total = bill + tip
         
         

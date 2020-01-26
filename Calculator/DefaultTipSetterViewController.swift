@@ -23,8 +23,20 @@ class DefaultTipSetterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //Get default tip values
+        let tipPercentages = defaults.object(forKey:"tipPercentages") as?[Double] ?? [15,18,20]
+        //assign values to text fields to diplay current tips
+        defaultTipOneField.text = String(tipPercentages[0])
+        defaultTipTwoField.text = String(tipPercentages[1])
+        defaultTipThreeField.text = String(tipPercentages[2])
+
+    }
+    
 
     @IBAction func updateTipValues(_ sender: Any) {
+        //On submit assign percentages values to default values
         if(defaultTipOneField.text?.isEmpty ?? true || defaultTipTwoField.text?.isEmpty ?? true || defaultTipThreeField.text?.isEmpty ?? true){
             print("All fields required")
         }else{
@@ -35,6 +47,7 @@ class DefaultTipSetterViewController: UIViewController {
             ]
 
             defaults.set(tipPercentages,forKey: "tipPercentages")
+            _ = navigationController?.popViewController(animated: true)
 
         }
     }
